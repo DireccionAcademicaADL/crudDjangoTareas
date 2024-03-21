@@ -1,0 +1,8 @@
+{% extends 'layout/base.html'%} {%block content%}
+<h1>Formulario para nuevas tareas</h1>
+<form action="/crearTarea/" method="POST">
+  {% csrf_token %} {{error}} {{form}}
+
+  <input type="submit" value="Guardar tarea" />
+</form>
+{%endblock%}

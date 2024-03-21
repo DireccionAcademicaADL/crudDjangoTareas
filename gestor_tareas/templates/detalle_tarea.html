@@ -1,0 +1,10 @@
+{% extends 'layout/base.html'%} {%block content%}
+<h1>Detalle tarea</h1>
+<h4>{{tarea.titulo}}</h4>
+{{error}}
+<form method="POST">
+  {% csrf_token %} {{form.as_p}}
+
+  <input type="submit" value="Actualizar tarea" />
+</form>
+{%endblock%}

@@ -1,0 +1,16 @@
+{% extends 'layout/base.html'%} {%block content%}
+<h1>Tareas</h1>
+
+<ul>
+  {%for tarea in tareas%}
+  <li>
+    <h4>{{tarea.titulo}}</h4>
+    <p>{{tarea.descripcion}}</p>
+    <p>{{tarea.user.username}}</p>
+    <a href="{% url 'detalleTarea' tarea.id %}">Editar tarea</a>
+    <a href="{% url 'borrarTarea' tarea.id %}">Eliminar tarea</a>
+  </li>
+  {%endfor%}
+</ul>
+
+{%endblock%}

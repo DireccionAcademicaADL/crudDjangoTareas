@@ -1,0 +1,7 @@
+{% extends 'layout/base.html'%} {%block content%} {{error}}
+<form action="/login/" method="POST">
+  {% csrf_token %} {{form}}
+
+  <input type="submit" class="btn btn-primary" value="Login" />
+</form>
+{%endblock%}
